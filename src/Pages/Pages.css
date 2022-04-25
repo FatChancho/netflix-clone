@@ -1,3 +1,5 @@
+/*-------- LOGIN --------*/
+
 .login{
     position: relative;
     height: 100vh;
@@ -65,4 +67,73 @@ top: 50%;
 .btn-start button:hover{
     color: #000;
     background-color: #e6e6e6;
+}
+
+/*------- PROFILE -------*/
+.profilePage{
+   background-color: #000;
+   height: 100vh;
+   color: white;
+}
+.profilePage h1{
+    position: relative;
+    text-align: center;
+    top: 5rem;
+    font-size: 40px;
+}
+
+.avatar{
+    width: 120px;
+}
+.plans{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 7rem;
+   
+}
+.plans button{
+    width: max-content;
+    color: white;
+    background-color: red;  
+}
+.plans button:hover{
+    color: #000;
+    background-color: #e6e6e6;
+}
+.btn2{
+    display: flex;
+    justify-content: center;
+}
+.btn2 button{
+    color: white;
+    width: max-content;
+    background-color: red;
+    top: 9rem;
+}
+.btn2 button:hover{
+    color: #000;
+    background-color: #e6e6e6;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    top: 7rem;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    gap:2rem
+}
+.column h3{
+    background-color: gray;
+    width: 350px;
+    border-radius: 5px;
+    padding-left: 2rem;
+
 }
