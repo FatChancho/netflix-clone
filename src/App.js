@@ -10,7 +10,7 @@ import './App.css';
 
 
 function App() {
-  const user='pepe';
+  const user=null;
   //const classes =useStyles();
   return (
     <div className='App'>

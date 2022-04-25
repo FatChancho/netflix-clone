@@ -1,0 +1,68 @@
+.login{
+    position: relative;
+    height: 100vh;
+    background-image: url('../Images/Hero-bannner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
+}
+
+.logo{
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    width: 150px;
+    cursor: pointer;
+}
+.btn{
+   display: flex;
+   justify-content: flex-end;
+}
+.btn button{
+    margin-right: 2rem;
+    width: max-content;
+    color: white;
+    position: fixed;
+    top: 10px;
+    background-color: red;
+    padding: 1rem;   
+}
+.btn button:hover{
+    color: #000;
+    background-color: #e6e6e6;
+}
+.info{
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 25%;
+    font-size: 25px;
+}
+.input{
+display: flex;
+justify-content: center;
+position: relative;
+top: 50%;
+}
+.input input{
+    width: 300px;
+    padding-left: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+.btn-start{
+    width: max-content;
+    color: white;
+    background-color: red;  
+    border-radius: 5px;
+}
+.btn-start button{
+    width: max-content;
+    color: white;
+    background-color: red;   
+}
+.btn-start button:hover{
+    color: #000;
+    background-color: #e6e6e6;
+}
