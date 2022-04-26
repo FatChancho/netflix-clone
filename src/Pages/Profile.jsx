@@ -3,8 +3,18 @@ import Header from '../components/Header';
 import avatar from '../Images/aa64a1ee094b8f798053b51800c622fb.jpg'
 import Plans from '../components/Plans'
 import { Button } from '@mui/material';
+import './Pages.css'
+import { getAuth } from 'firebase/auth';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function Profile() {
+    const auth=getAuth();
+    const navigate=useNavigate()
+    const signout = ()=>{
+        auth.signOut();
+        navigate('/login');
+    }
+
     return (
         <div className='profilePage'>
             <Header/>   
@@ -12,7 +22,7 @@ function Profile() {
             <div className='flex'>
                     <img className='avatar' src={avatar} alt='avatar'></img>
                     <div className='column'>
-                        <h3>Email Usuario</h3>
+                        <input placeholder='Email address'/>
                         <h2>Plans</h2>
                         <hr/>
                     </div>                        
@@ -23,7 +33,7 @@ function Profile() {
                     <Plans cost={12.99}>Netflix Premium</Plans>
                 </div>
             <div className='btn2'>
-                <Button>Sign out</Button>
+                <Button onClick={signout}>Sign out</Button>
             </div>
         </div>
         
