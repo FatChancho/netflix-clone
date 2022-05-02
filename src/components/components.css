@@ -81,5 +81,30 @@
     }
 }
 
+/*-------- ROW ------------*/
+.row{
+    background-color: #000;
+    color: white;
+    position: relative;
+    top: -12rem;
+    padding-left: 2rem;
+}
+.row h3{
+    padding: 1rem 0;
+    font-size: 20px;
+}
+.row-flex{
+    display: flex;
+    overflow-x:scroll;
+}
+.image{
+    width: 150px;
+    margin-right: 0.5rem;
+}
+.image:hover{
+    transform: scale(1.15);
+    transition: all ease 1s;
+}
+
 
 

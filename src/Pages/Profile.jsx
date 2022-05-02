@@ -5,7 +5,7 @@ import Plans from '../components/Plans'
 import { Button } from '@mui/material';
 import './Pages.css'
 import { getAuth } from 'firebase/auth';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Profile() {
     const auth=getAuth();
@@ -14,6 +14,7 @@ function Profile() {
         auth.signOut();
         navigate('/login');
     }
+    console.log(auth)
 
     return (
         <div className='profilePage'>

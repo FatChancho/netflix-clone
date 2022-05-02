@@ -35,8 +35,8 @@ function Signup() {
     navigate('/')
     })
   .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
+        console.log('error-code:',error.code)
+        console.log('message:',error.message)
   })
     
   }

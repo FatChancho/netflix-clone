@@ -1,22 +1,37 @@
 import { Button } from '@mui/material';
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import heroBanner from '../Images/netflix.jpg'
+import { baseURL } from '../Requests';
+import request from '../Requests';
 
 function Banner() {
     const truncate = (str,n)=> str?.length>n ? `${str.substr(0,n-1)}...` : str
+    const[movie,setMovie]=useState();
+    const url_img='https://image.tmdb.org/t/p/original'
+    
+    useEffect(()=>{
+        axios.get(baseURL+request.fetchNetflixOriginals)
+        .then((response)=>{
+            const random=Math.floor(Math.random()*(response.data.results.length-1))
+            random ? setMovie(response.data.results[random]):
+            console.log('Movie',movie)
+        })
+        .catch((err)=>console.log('error al traer random',err))
+    },[])
 
     return (
         <div>
             <div className='banner'>
-                <img src={heroBanner} alt='banner'></img>
-                <h1>Movie Title</h1>
+                {movie && <img src={url_img+movie.poster_path} alt='banner'></img>}
+                {movie && <h1>{movie.original_name}</h1>}
             </div>
             <div className='buttons'>
                 <Button>Play</Button>
                 <Button>My List</Button>
             </div>
             <div className='description'>
-                <p>{truncate(`It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,150)}</p>
+                {movie && <p>{truncate(movie.overview,150)}</p>}
             </div>
         </div>
     );
