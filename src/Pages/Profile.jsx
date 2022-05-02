@@ -14,7 +14,6 @@ function Profile() {
         auth.signOut();
         navigate('/login');
     }
-    console.log(auth)
 
     return (
         <div className='profilePage'>
